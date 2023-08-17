@@ -8,8 +8,6 @@
 }
 body{
     box-sizing: border-box;
-    position: relative;
-    height: 100vh;
     line-height: 1.5;
     font-family: sans-serif;
     overflow-x: hidden;
@@ -77,11 +75,10 @@ li:hover{
 }
 
 .main_one{
-    padding-top: 30px;
-    padding-bottom: 60px;
-    background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
     display: flex;
+    background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
     flex-direction: column;
+    justify-content: start;
     align-items: center;
     text-align: center;
 }
@@ -95,15 +92,21 @@ li:hover{
     text-align: center;
     color: #111;
     font-weight: 800;
+    position: relative;
+    bottom: 80px;
 }
 
 .main_one #init{
     margin-top: 50px;
     font-size: 20px;
+    position: relative;
+    bottom: 80px;
 }
 
 .main_one p{
     font-size: 20px;
+    position: relative;
+    bottom: 80px;
 }
 
 .main_one button{
@@ -121,11 +124,13 @@ li:hover{
     padding: 1.5rem 4rem;
     font-size: 1rem;
     outline: none;
+    margin-bottom: 40px;
+    position: relative;
+    bottom: 80px;
 }
 
 .main_one button:hover{
     position: relative;
-    bottom: 5px;
     cursor: pointer;
 }
 
@@ -133,7 +138,7 @@ li:hover{
     box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
     border-radius: 10px;
     position: relative;
-    bottom: 20pc;
+    bottom: 22pc;
     padding-left: 20px;
     gap: 20px;
     width: 50px;
@@ -144,28 +149,53 @@ li:hover{
     width: 30px;
     padding: 10px 0 ;
 }
+
 .aboutMe{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    bottom: 120px;
 }
+
 .text{
     text-align: center;
 }
-.text h2{
+.text1{
+    text-align: center;
+}
+.text1 h2{
     font-family: 'Source Sans Pro',sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 2rem;
     color: #111;
 }
-
-.text span{
+.text1 h2::before{
+    content: '';
+    position: absolute;
+    top: 35%;
+    height: 5px;
+    width: 3rem;
+    background: #7843e9;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+.text1 p{
+    text-align: center;
+    font-size: 20px;
+    color: #555;
+    max-width: 60rem;
+    margin-top: 30px;
+    line-height: 1.6;
+}
+.text {
     line-height: 1.6;
     margin-top: 60px;
     display: block;
     max-width: 60rem;
-    color: #555;
+    color: #fff;
     font-size: 20px;
 }
 
@@ -173,10 +203,9 @@ li:hover{
     width: 100vw;   
     display: flex;
     gap: 8rem;
-    margin: 50px 40px;
+    margin: 95px 40px;
 }
-.skills .info{
-}
+
 .skills .info h3{
     margin-bottom: 3rem;
     font-weight: 700;
@@ -223,14 +252,18 @@ li:hover{
     color: #666;
 }
 .projects{
+    padding: 10px;
+    background-color: rgba(25, 25, 25, 25);
+    color: #fff;
     text-align: center;
 }
 .projects h3{
     font-size: 30px;
     letter-spacing: 4px;
     text-transform: uppercase;
-    margin-bottom: 90px;
-    color: #111;
+    margin-bottom: 100px;
+    padding-top: 25px;
+    color: #fff;
     position: relative;
 }
 .projects h3::before{
@@ -277,16 +310,22 @@ li:hover{
     border: none;
     font-weight: 700;
     margin-top: 60px;
-    font-size: 17px;
-    padding: 20px 60px;
+    font-size: 15px;
+    padding: 10px 20px;
     box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
     border-radius: 5px;
 }
+
+.project .text button:hover{
+    cursor: pointer;
+    transform: scale(105%);
+}
+
 .project img{
     width: 50pc;
 }
 .contact{
-    margin-top: 120px;
+    margin-top: 70px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -342,8 +381,7 @@ hr{
     height: 2px;
 }
 .footer{
-    margin-top: 60px;
-    margin-left: 20px;
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
 }
